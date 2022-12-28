@@ -14,6 +14,7 @@ import ThoughtForm from '../components/ThoughtForm';
 const Profile = () => {
   const [addFriend] = useMutation(ADD_FRIEND);
   const { username: userParam } = useParams();
+  console.log(userParam)
 
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam }
